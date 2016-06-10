@@ -15,8 +15,8 @@ function onLoaded(eventObject) {
 				outputDiv.innerHTML += `<p>${currentBrand.types[p].type}</p>`
 
 				for (var j = 0; j < currentBrand.types[p].volumes.length; j++) {
-					outputDiv.innerHTML += `<p>${currentBrand.types[p].volumes[j].name}</p>`
-					outputDiv.innerHTML += `<p>${currentBrand.types[p].volumes[j].price}</p>`	
+					outputDiv.innerHTML += `<p class="cat-name">${currentBrand.types[p].volumes[j].name}: </p>`
+					outputDiv.innerHTML += `<p class="cat-price">${currentBrand.types[p].volumes[j].price}</p><br>`	
 				}				
 		};
 	};
@@ -34,8 +34,8 @@ function catLoaded(eventObject) {
 			catDiv.innerHTML += `<p >${currentBrand.breeds[i].breed}</p>`
 
 			for (var j = 0; j < currentBrand.breeds[i].volumes.length; j++) {
-				catDiv.innerHTML += `<p>${currentBrand.breeds[i].volumes[j].name}: `;
-				catDiv.innerHTML += `${currentBrand.breeds[i].volumes[j].price}</p>`
+				catDiv.innerHTML += `<p class="cat-name">${currentBrand.breeds[i].volumes[j].name}: </p>`;
+				catDiv.innerHTML += `<p class="cat-price">${currentBrand.breeds[i].volumes[j].price}</p></br>`
 			}
 		}
 	}
